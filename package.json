@@ -7,8 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
-  },
-  "dependencies": {
+"dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "lucide-react": "latest",
@@ -23,7 +22,7 @@
     "sonner": "latest",
     "recharts": "latest",
     "embla-carousel-react": "latest",
-    "date-fns": "latest",
+    "date-fns": "^3.6.0",
     "react-hook-form": "latest",
     "@hookform/resolvers": "latest",
     "react-icons": "latest",
@@ -33,6 +32,7 @@
     "input-otp": "latest",
     "react-day-picker": "latest",
     "tw-animate-css": "latest"
+  },
   },
   "devDependencies": {
     "@radix-ui/react-accordion": "latest",
