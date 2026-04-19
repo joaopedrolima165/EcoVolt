@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "EcoVolt"
+version = "1.0.0"
+id = "artifacts/ecovolt"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22001
+
+[services.development]
+run = "pnpm --filter @workspace/ecovolt run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/ecovolt", "run", "build" ]
+publicDir = "artifacts/ecovolt/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22001"
+BASE_PATH = "/"
